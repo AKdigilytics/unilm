@@ -94,7 +94,7 @@ def get_labels(path):
 
 def train(  # noqa C901
     args, train_dataset, model, tokenizer, labels, pad_token_label_id
-):
+    ):
     """ Train the model """
     if args.local_rank in [-1, 0]:
         tb_writer = SummaryWriter(logdir="runs/" + os.path.basename(args.output_dir))
